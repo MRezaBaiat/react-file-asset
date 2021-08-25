@@ -11,7 +11,7 @@ export default abstract class AbstractFileSystem<FileEntryType extends FileEntry
   public abstract upload(fileAsset: FileAsset<FileEntryType>, url: string, headers: Record<string, string>, onProgress: (progress: number)=> void, axiosInstance?: AxiosInstance): Promise<FileEntryType>
   public abstract initialize(): Promise<void>;
   protected abstract save(media: FileEntryType, data: DataType): Promise<FileEntryType>
-  public abstract create(media: FileEntryType): FileAsset<FileEntryType>;
+  public abstract create(entry: FileEntryType): FileAsset<FileEntryType>;
 
   constructor (name: string) {
     super();

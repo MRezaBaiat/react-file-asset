@@ -16,8 +16,8 @@ export default class BrowserFileSystem<T extends FileEntry> extends AbstractFile
   private readonly storage: LocalForage;
   private itemsCache = new Map<string, FileItem>();
 
-  public create (media: T): FileAsset<T> {
-    return FileAsset.create(media, this);
+  public create (entry: T): FileAsset<T> {
+    return FileAsset.create(entry, this);
   }
 
   constructor (cacheName: string) {

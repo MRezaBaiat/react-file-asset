@@ -29,8 +29,8 @@ class BrowserFileSystem extends abstract_file_system_1.default {
             version: 1.0
         });
     }
-    create(media) {
-        return file_asset_1.default.create(media, this);
+    create(entry) {
+        return file_asset_1.default.create(entry, this);
     }
     initialize() {
         return tslib_1.__awaiter(this, void 0, void 0, function* () {
