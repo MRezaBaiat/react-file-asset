@@ -3,5 +3,4 @@ node_modules
 .eslintrc.json
 yarn-error.log
 tsconfig.json
-*.ts
-!*.d.ts
+*.d.ts
