@@ -5,6 +5,7 @@ import { FileEntry } from './file.entry';
 export default class BrowserFileSystem<T extends FileEntry> extends AbstractFileSystem<T, Blob> {
     private readonly storage;
     private itemsCache;
+    create(media: T): FileAsset<T>;
     constructor(cacheName: string);
     initialize(): Promise<void>;
     protected save(media: T, blob: Blob): Promise<T>;

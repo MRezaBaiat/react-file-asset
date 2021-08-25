@@ -3,6 +3,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
 const tslib_1 = require("tslib");
 const abstract_file_system_1 = tslib_1.__importDefault(require("./abstract.file.system"));
 const axios_1 = tslib_1.__importDefault(require("axios"));
+const file_asset_1 = tslib_1.__importDefault(require("./file.asset"));
 const localforage_1 = tslib_1.__importDefault(require("localforage"));
 class BrowserFileSystem extends abstract_file_system_1.default {
     constructor(cacheName) {
@@ -27,6 +28,9 @@ class BrowserFileSystem extends abstract_file_system_1.default {
             driver: localforage_1.default.INDEXEDDB,
             version: 1.0
         });
+    }
+    create(media) {
+        return file_asset_1.default.create(media, this);
     }
     initialize() {
         return tslib_1.__awaiter(this, void 0, void 0, function* () {
