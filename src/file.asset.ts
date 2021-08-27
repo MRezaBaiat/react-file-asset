@@ -31,7 +31,7 @@ export default class FileAsset<T extends FileEntry> extends EventEmitter<EventTy
       });
     }
 
-    public static create<T extends FileEntry> (media: T, fileSystem: AbstractFileSystem<T, any>): FileAsset<T> {
+    public static create<T extends FileEntry> (media: T, fileSystem: AbstractFileSystem<any, any>): FileAsset<T> {
       let existing = cache.get(media._id);
       if (!existing) {
         existing = new FileAsset(media, fileSystem);

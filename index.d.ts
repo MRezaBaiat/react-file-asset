@@ -1,6 +1,6 @@
 import AbstractFileSystem from './src/abstract.file.system';
 import FileAsset, { FileAssetInfo } from './src/file.asset';
-import { FileEntry } from './src/file.entry';
+import { FileEntry, Uploadable, Downloadable } from './src/file.entry';
 import useFileAsset from './src/useFileAsset';
 export declare enum IOState {
     IDLE = "IDLE",
@@ -13,4 +13,4 @@ export declare enum IOState {
     UPLOAD_FAILED = "UPLOAD_FAILED",
     DOWNLOAD_FAILED = "DOWNLOAD_FAILED"
 }
-export { AbstractFileSystem, FileAsset, FileAssetInfo, FileEntry, useFileAsset };
+export { AbstractFileSystem, FileAsset, FileAssetInfo, FileEntry, useFileAsset, Uploadable, Downloadable };

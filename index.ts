@@ -1,6 +1,6 @@
 import AbstractFileSystem from './src/abstract.file.system';
 import FileAsset, { FileAssetInfo } from './src/file.asset';
-import { FileEntry } from './src/file.entry';
+import { FileEntry, Uploadable, Downloadable } from './src/file.entry';
 import useFileAsset from './src/useFileAsset';
 
 export enum IOState {
@@ -20,5 +20,7 @@ export {
   FileAsset,
   FileAssetInfo,
   FileEntry,
-  useFileAsset
+  useFileAsset,
+  Uploadable,
+  Downloadable
 };

@@ -11,6 +11,6 @@ declare function useFileAsset(media: FileEntry, fileSystem: AbstractFileSystem<a
         progress: number;
         localAddress: string;
     } | undefined;
-    asset: FileAsset<any>;
+    asset: FileAsset<FileEntry>;
 };
 export default useFileAsset;

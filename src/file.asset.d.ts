@@ -21,7 +21,7 @@ export default class FileAsset<T extends FileEntry> extends EventEmitter<EventTy
     private state;
     private progress;
     private constructor();
-    static create<T extends FileEntry>(media: T, fileSystem: AbstractFileSystem<T, any>): FileAsset<T>;
+    static create<T extends FileEntry>(media: T, fileSystem: AbstractFileSystem<any, any>): FileAsset<T>;
     private notifyListeners;
     private changeState;
     getMedia: () => T;
